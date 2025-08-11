@@ -22,6 +22,7 @@ class UsersCubit extends Cubit<UsersState> {
 
   // Expose a single ScrollController owned by the Cubit
   final ScrollController scrollController = ScrollController();
+  bool get hasMore => _hasMore;
 
   // Local pagination bookkeeping
   int _currentPage = 0;

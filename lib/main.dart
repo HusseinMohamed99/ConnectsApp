@@ -31,7 +31,10 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Connects App',
-          theme: ThemeData(primarySwatch: Colors.blue),
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            scaffoldBackgroundColor: const Color.fromRGBO(247, 249, 252, 1),
+          ),
           initialRoute: Routes.usersView,
           onGenerateRoute: appRouter.generateRoute,
         );
