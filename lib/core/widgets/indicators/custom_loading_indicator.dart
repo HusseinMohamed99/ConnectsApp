@@ -1,0 +1,87 @@
+import 'package:connects_app/core/helpers/enum/enum.dart';
+import 'package:connects_app/core/helpers/extensions/widget_extension.dart';
+import 'package:connects_app/core/theming/colorsManager/color_manager.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+
+/// A unified and customizable loading indicator widget for all types.
+class CustomLoader extends StatelessWidget {
+  const CustomLoader({
+    super.key,
+    this.type = LoaderType.circular,
+    this.color,
+    this.size,
+  });
+
+  /// Type of loader (circular, adaptive, wave).
+  final LoaderType type;
+
+  /// Color of the loader.
+  final Color? color;
+
+  /// Optional size for loaders that support it.
+  final double? size;
+
+  @override
+  Widget build(BuildContext context) {
+    final loaderColor = color ?? ColorManager.mainBlue;
+
+    switch (type) {
+      case LoaderType.adaptive:
+        return Center(
+          child: SpinKitThreeInOut(color: loaderColor, size: size ?? 40),
+        );
+
+      case LoaderType.wave:
+        return Center(
+          child: SpinKitWaveSpinner(
+            color: loaderColor,
+            waveColor: loaderColor,
+            trackColor: loaderColor,
+            duration: const Duration(seconds: 2),
+            size: size ?? 45,
+          ),
+        );
+
+      case LoaderType.circular:
+        return SizedBox(
+          width: size ?? 20,
+          height: size ?? 20,
+          child: CircularProgressIndicator.adaptive(
+            strokeWidth: 2,
+            valueColor: AlwaysStoppedAnimation<Color>(loaderColor),
+          ),
+        ).center();
+    }
+  }
+}
+
+/// Overlay-based loader wrapper for screens or widgets.
+class LoadingIndicatorOverlay extends StatelessWidget {
+  const LoadingIndicatorOverlay({
+    super.key,
+    required this.isLoading,
+    required this.child,
+    this.loaderType = LoaderType.wave,
+    this.overlayColor,
+  });
+
+  final bool isLoading;
+  final Widget child;
+  final LoaderType loaderType;
+  final Color? overlayColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        child,
+        if (isLoading)
+          Container(
+            color: overlayColor ?? ColorManager.mainBlue,
+            child: Center(child: CustomLoader(type: loaderType)),
+          ),
+      ],
+    );
+  }
+}
