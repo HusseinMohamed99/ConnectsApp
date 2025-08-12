@@ -76,7 +76,7 @@ class CustomSmartImage extends StatelessWidget {
         alignment: Alignment.center,
         child: Icon(
           Icons.broken_image,
-          color: ColorManager.darkGreyColor,
+          color: ColorManager.textBlackColor,
           size: 30.sp,
         ),
       );

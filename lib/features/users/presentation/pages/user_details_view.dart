@@ -1,6 +1,7 @@
 import 'package:connects_app/core/helpers/dimensions/dimensions.dart';
 import 'package:connects_app/core/helpers/enum/enum.dart';
 import 'package:connects_app/core/helpers/extensions/widget_extension.dart';
+import 'package:connects_app/core/helpers/function/email_launcher.dart';
 import 'package:connects_app/core/helpers/responsive/spacing.dart';
 import 'package:connects_app/core/theming/styleManager/text_style.dart';
 import 'package:connects_app/core/widgets/errors/custom_error_widget.dart';
@@ -46,10 +47,13 @@ class UserDetailsPage extends StatelessWidget {
                 ).center(),
                 verticalSpacing(kSpacingSmall),
                 // Email
-                Text(
-                  user.email,
-                  style: AppTextStyleManager.regularTextGrey12(context),
-                ).center(),
+                GestureDetector(
+                  onTap: () => openMailTo,
+                  child: Text(
+                    user.email,
+                    style: AppTextStyleManager.regular12(context),
+                  ).center(),
+                ),
               ],
             ),
           );

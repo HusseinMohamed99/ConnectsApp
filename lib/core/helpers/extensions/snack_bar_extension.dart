@@ -24,7 +24,10 @@ extension SnackBarExtension on BuildContext {
           message,
           style:
               textStyle ??
-              AppTextStyleManager.medium14(this, color: ColorManager.mainBlue),
+              AppTextStyleManager.semiBold14(
+                this,
+                color: ColorManager.mainBlue,
+              ),
         ),
       ),
     );

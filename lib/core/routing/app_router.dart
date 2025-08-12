@@ -1,6 +1,6 @@
 import 'package:connects_app/core/di/dependency_injection.dart';
 import 'package:connects_app/core/routing/routes.dart';
-import 'package:connects_app/core/widgets/errors/init_error_screen.dart';
+import 'package:connects_app/core/widgets/errors/custom_error_widget.dart';
 import 'package:connects_app/features/users/presentation/cubit/user_details_cubit.dart';
 import 'package:connects_app/features/users/presentation/cubit/users_cubit.dart';
 import 'package:connects_app/features/users/presentation/pages/user_details_view.dart';
@@ -16,7 +16,7 @@ class AppRouters {
       case Routes.usersView:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (_) => getIt<UsersCubit>()..loadUsersPage(1),
+            create: (_) => getIt<UsersCubit>()..loadUsersPage(2),
             child: const UsersView(),
           ),
         );
@@ -33,14 +33,15 @@ class AppRouters {
         );
 
       default:
-        return _errorRoute();
+        return null;
     }
   }
 
   Route<dynamic> _errorRoute() {
     return MaterialPageRoute(
-      builder: (_) =>
-          const InitErrorScreen(error: 'Page not found or invalid arguments'),
+      builder: (_) => const CustomErrorTextWidget(
+        errorMessage: 'Page not found or invalid arguments',
+      ),
     );
   }
 }
