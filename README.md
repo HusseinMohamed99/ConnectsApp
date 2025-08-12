@@ -1,16 +1,65 @@
-# connects_app
+# 📱 Connects App
 
-A new Flutter project.
+**Connects App** is a Flutter application for displaying a list of users with detailed profiles, built using **Clean Architecture** and **BLoC** state management.  
+The app supports responsive design with **flutter_screenutil** and features a modern **Glassmorphism UI**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🔄 **State Management** with `flutter_bloc`
+- 🌐 **API Integration** using `Dio` & `Retrofit`
+- 🧩 **Clean Architecture** (Data, Domain, Presentation layers)
+- 🖼 **Modern UI** with Glassmorphism effects
+- 📱 **Responsive UI** with `flutter_screenutil`
+- ⚡ **Pagination** for user list
+- 🔍 **User Details** screen with smooth navigation
+- 🛠 **Retry Mechanism** for failed requests
+- 🔄 **Pull-to-refresh** for data updates
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📂 Project Structure
+
+lib/
+├── core/
+│ ├── di/ # Dependency Injection (GetIt)
+│ ├── helpers/ # Utilities (dimensions, spacing, extensions)
+│ ├── networking/ # API constants, service, error handling
+│ ├── theming/ # Colors, Styles
+│ └── widgets/ # Shared Components (Loader, Error, Avatar...)
+│
+├── features/
+│ └── users/
+│ ├── data/ # Models, API Calls, Repository
+│ ├── domain/ # Entities, UseCases
+│ └── presentation/ # Cubits, Views, Widgets
+│
+└── main.dart
+
+---
+
+## 🌐 API
+
+This app uses the Reqres public API for demonstration:
+
+GET /users?page=1 → Fetch paginated user list
+
+GET /users/{id} → Fetch single user details
+
+## 🛠 Tech Stack
+
+State Management: flutter_bloc
+
+Networking: dio, retrofit
+
+Dependency Injection: get_it
+
+Responsive UI: flutter_screenutil
+
+Animations: Hero, AnimatedSwitcher
+
+UI Effects: Glassmorphism
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
