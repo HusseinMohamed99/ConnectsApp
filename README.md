@@ -19,26 +19,6 @@ The app supports responsive design with **flutter_screenutil** and features a mo
 
 ---
 
-## 📂 Project Structure
-
-lib/
-├── core/
-│ ├── di/ # Dependency Injection (GetIt)
-│ ├── helpers/ # Utilities (dimensions, spacing, extensions)
-│ ├── networking/ # API constants, service, error handling
-│ ├── theming/ # Colors, Styles
-│ └── widgets/ # Shared Components (Loader, Error, Avatar...)
-│
-├── features/
-│ └── users/
-│ ├── data/ # Models, API Calls, Repository
-│ ├── domain/ # Entities, UseCases
-│ └── presentation/ # Cubits, Views, Widgets
-│
-└── main.dart
-
----
-
 ## 🌐 API
 
 This app uses the Reqres public API for demonstration:
