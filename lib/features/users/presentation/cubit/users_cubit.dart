@@ -64,7 +64,7 @@ class UsersCubit extends Cubit<UsersState> {
             UsersPageEntity(
               page: _currentPage,
               totalPages: _totalPages,
-              data: List.unmodifiable(_usersCache), // immutable view
+              data: List.unmodifiable(_usersCache),
             ),
           ),
         );

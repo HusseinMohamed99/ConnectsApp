@@ -45,9 +45,7 @@ class ColorManager {
     0xFFE0E0E0,
   ); // Input border / dividers
 
-  static const Color mainBlack = Color(0xFF000000); // App black
   // === Brand Primary Colors ===
-  static const Color mainBlue = Color(0xFF2132B2); // Main brand blue
 
   // === Neutral Colors ===
   static const Color mainWhite = Color(0xFFFFFFFF); // App white
@@ -78,10 +76,17 @@ class ColorManager {
   static const Color tealColor = Color(0xFF29ACA8); // Main teal tone
 
   // === Text Colors ===
-  static const Color textBlackColor = Color(0xFF272727); // Primary black text
-  static const Color textGrey = Color(0xFF858585); // Tertiary gray text
   static const Color textGreyColor = Color(0xFF8D8F8F); // Secondary gray text
 
   static const Color yellowColor = Color(0xFFFDB827); // Branding yellow/accent
+
+
+
+  // NEEDED
+    static const Color textBlackColor = Color(0xFF1F1E1E); // Primary black text
+    static const Color mainBlack = Color(0xFF000000); // App black
+  static const Color textGrey = Color(0xFF1C1E1B); // Tertiary gray text
+  static const Color mainBlue = Color(0xFF2132B2); // Main brand blue
+
 
 }

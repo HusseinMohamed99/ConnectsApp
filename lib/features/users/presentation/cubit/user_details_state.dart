@@ -1,4 +1,3 @@
-// features/users/presentation/cubit/user_details_state.dart
 part of 'user_details_cubit.dart';
 
 @freezed

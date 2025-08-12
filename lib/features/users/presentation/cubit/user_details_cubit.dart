@@ -1,4 +1,3 @@
-// features/users/presentation/cubit/user_details_cubit.dart
 import 'package:bloc/bloc.dart';
 import 'package:connects_app/core/networking/api_result.dart';
 import 'package:connects_app/features/users/domain/entities/user_entity.dart';
@@ -15,7 +14,7 @@ class UserDetailsCubit extends Cubit<UserDetailsState> {
 
   // Load user details by id
   Future<void> load(int id) async {
-    emit(const UserDetailsState.loading()); // show loader
+    emit(const UserDetailsState.loading());
     final res = await _getUser(id);
     res.when(
       success: (user) => emit(UserDetailsState.loaded(user)),

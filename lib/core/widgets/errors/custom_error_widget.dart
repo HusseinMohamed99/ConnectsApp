@@ -33,7 +33,7 @@ class CustomErrorTextWidget extends StatelessWidget {
               textAlign: textAlign,
               style:
                   textStyle ??
-                  AppTextStyleManager.bold16(context)
+                  AppTextStyleManager.semibold16(context)
             ),
             if (onRetry != null) ...[
               verticalSpacing(kSpacingMedium),
@@ -46,7 +46,7 @@ class CustomErrorTextWidget extends StatelessWidget {
                       Icons.refresh_outlined,
                       size: kIconSizeDefault.sp,
                     ),
-                    horizontalSpacing(4),
+                    horizontalSpacing(kSpacingSmaller),
                     Text(
                       'Try Again',
                       style:  AppTextStyleManager.semiBold14(context)

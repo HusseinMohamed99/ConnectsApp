@@ -6,14 +6,42 @@ import 'package:flutter/material.dart';
 
 /// Manages app-wide text styles with dynamic font family based on locale.
 abstract class AppTextStyleManager {
+// ============== NEEDED =============== //
 
+  static TextStyle semibold16(BuildContext context, {Color? color}) => buildStyle(
+    context,
+    fontSize: FontSizeHelper.s16,
+    color: color ?? ColorManager.textBlackColor,
+    fontWeight: FontWeightHelper.semiBold,
+  );
+  static TextStyle regular16(BuildContext context, {Color? color}) =>
+      buildStyle(
+        context,
+        fontSize: FontSizeHelper.s16,
+        color: color ?? ColorManager.mainBlack,
+      );
+       static TextStyle semiBold14(BuildContext context, {Color? color}) =>
+      buildStyle(
+        context,
+        fontSize: FontSizeHelper.s14,
+        color: color ?? ColorManager.mainBlue,
+        fontWeight: FontWeightHelper.semiBold,
+      );
+
+
+        static TextStyle mediumTextBlack16(BuildContext context) => buildStyle(
+    context,
+    fontSize: FontSizeHelper.s16,
+    color: ColorManager.textBlackColor,
+    fontWeight: FontWeightHelper.medium,
+  );
+  static TextStyle regularTextGrey12(BuildContext context) => buildStyle(
+    context,
+    fontSize: FontSizeHelper.s12,
+    color: ColorManager.textGrey,
+  );
   // ============ Bold Text ============ //
-  // static TextStyle boldBlack32(BuildContext context) => _textStyle(
-  //   context,
-  //   fontSize: FontSizeHelper.s32,
-  //   color: ColorManager.headerColor,
-  //   fontWeight: FontWeightHelper.bold,
-  // );
+
   static TextStyle boldTextBlack30(BuildContext context) => buildStyle(
     context,
     fontSize: FontSizeHelper.s30,
@@ -58,13 +86,7 @@ abstract class AppTextStyleManager {
     fontWeight: FontWeightHelper.semiBold,
   );
 
-  static TextStyle semiBold14(BuildContext context, {Color? color}) =>
-      buildStyle(
-        context,
-        fontSize: FontSizeHelper.s14,
-        color: color ?? ColorManager.mainBlue,
-        fontWeight: FontWeightHelper.semiBold,
-      );
+ 
 
   static TextStyle semiBoldMainBlue16(BuildContext context) => buildStyle(
     context,
@@ -172,12 +194,6 @@ abstract class AppTextStyleManager {
     fontWeight: FontWeightHelper.medium,
   );
 
-  static TextStyle mediumTextBlack16(BuildContext context) => buildStyle(
-    context,
-    fontSize: FontSizeHelper.s16,
-    color: ColorManager.textBlackColor,
-    fontWeight: FontWeightHelper.medium,
-  );
 
   static TextStyle mediumMainBlue16(BuildContext context) => buildStyle(
     context,
@@ -213,11 +229,7 @@ abstract class AppTextStyleManager {
     color: ColorManager.darkGreyColor,
   );
 
-  static TextStyle regularTextGrey12(BuildContext context) => buildStyle(
-    context,
-    fontSize: FontSizeHelper.s12,
-    color: ColorManager.textGrey,
-  );
+
   static TextStyle regularMainBlue12(BuildContext context) => buildStyle(
     context,
     fontSize: FontSizeHelper.s12,

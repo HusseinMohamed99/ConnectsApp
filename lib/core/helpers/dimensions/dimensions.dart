@@ -2,8 +2,6 @@
 const double kPaddingLargeHorizontal = 33.0;
 const double kPaddingLargeVertical = 33.0;
 const double kPaddingXLargeVertical = 80.0;
-const double kPaddingMediumHorizontal = 12.0;
-const double kPaddingMediumVertical = 12.0;
 
 const double kPaddingHorizontal = 20.0;
 const double kPaddingVertical = 20.0;
@@ -26,7 +24,6 @@ const double kButtonMaxHeight = 74.0;
 /// Icon sizes
 const double kIconSizeXLarge = 40.0;
 const double kIconSizeLarge = 36.0;
-const double kIconSizeDefault = 24.0;
 const double kIconSizeSecondary = 20.0;
 const double kIconSizeMedium = 16.0;
 const double kIconSizeSmall = 12.0;
@@ -52,8 +49,6 @@ const double kBorderRadius2XLarge = 51.0;
 /// Spacing values for layout separation
 const double kSpacing5XLarge = 50.0;
 
-const double kSpacingSmall = 8.0;
-const double kSpacingSmaller = 4.0;
 
 ///New Dimensions
 const double kSpacing2XLarge = 24.0;
@@ -61,13 +56,26 @@ const double kSpacing4XLarge = 40.0;
 const double kSpacing3XLarge = 32.0;
 const double kSpacingXLarge = 22.0;
 const double kSpacingLarge = 20.0;
-const double kSpacingDefault = 16.0;
-const double kSpacingMedium = 12.0;
 
-const double kPaddingDefaultHorizontal = 16.0;
-const double kPaddingDefaultVertical = 16.0;
+
+
 const double kPaddingSmallHorizontal = 8.0;
 const double kPaddingSmallVertical = 8.0;
 const double kPaddingSmallerHorizontal = 4.0;
 const double kPaddingSmallerVertical = 4.0;
 const double kPaddingScaffoledDefaultVertical = 22.0;
+
+
+
+
+//NEEDED
+
+const double kSpacingMedium = 12.0;
+const double kPaddingDefaultHorizontal = 16.0;
+const double kPaddingDefaultVertical = 16.0;
+const double kPaddingMediumHorizontal = 12.0;
+const double kPaddingMediumVertical = 12.0;
+const double kSpacingSmaller = 4.0;
+const double kIconSizeDefault = 24.0;
+const double kSpacingDefault = 16.0;
+const double kSpacingSmall = 8.0;
